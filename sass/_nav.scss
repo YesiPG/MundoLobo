@@ -1,0 +1,88 @@
+@use 'var';
+@use 'mixins';
+
+.contenedorNav{
+    position: fixed;
+    width: 100%;
+    background-color: var.$color-negro;
+    @include mixins.flex(space-between,center);
+    @include mixins.paddingLados(8rem);
+    z-index: 80;
+
+    .logo{
+        @include mixins.imagen(5rem,auto);
+        filter: invert(0);
+    }
+    &--active{
+        opacity: 0;
+        pointer-events: none;
+    }
+    .navDesktop{
+        &__link{
+            display: inline-block;
+            margin-left: 1rem;
+            @include mixins.texto(var.$font-parrafo,1.4rem,var.$color-grisClaro);
+            transition:  color .3s ease;
+            pointer-events: unset;
+
+            &:hover{
+                color: var.$color-naranja;
+            }
+
+            &--active{
+                color: var.$color-naranja;
+                border-bottom: 2px solid var.$color-naranja;
+                pointer-events: none;
+            }
+        }
+    }
+
+    .botonMenu{
+        position: absolute;
+        right: 8rem;
+        top: auto;
+        bottom: auto;
+        background-color: var.$color-negro;
+        pointer-events: unset;
+        &__imagen{
+            @include mixins.imagen(3rem,auto);
+            filter: invert(1);
+            pointer-events: none;
+        }
+    }
+
+    .navMobile{
+        background-color: var.$color-negro;
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 60%;
+        @include mixins.flex(center,center);
+        flex-direction: column;
+        @include mixins.paddingTopBottom(0rem,2rem);
+        transition: right .5s ease;
+
+        &--active{
+            right: 0%;
+        }
+        &__link{
+            display: inline-block;
+            @include mixins.texto(var.$font-parrafo,1.4rem,var.$color-grisClaro);
+            transition:  color .3s ease;
+            pointer-events: unset;
+            @include mixins.paddingTopBottom(.5rem,.5rem);
+
+            &--active{
+                width: 100%;
+                background-color: var.$color-naranja;
+                text-align: center;
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px){
+        
+        
+    }
+}
+

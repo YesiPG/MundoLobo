@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  user-select: none;
+}
+
+.contenedorNav {
+  position: fixed;
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 8rem;
+  padding-right: 8rem;
+  z-index: 80;
+}
+.contenedorNav .logo {
+  max-width: 100%;
+  width: 5rem;
+  height: auto;
+  object-fit: cover;
+  filter: invert(0);
+}
+.contenedorNav--active {
+  opacity: 0;
+  pointer-events: none;
+}
+.contenedorNav .navDesktop__link {
+  display: inline-block;
+  margin-left: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+  color: #EAEAEA;
+  transition: color 0.3s ease;
+  pointer-events: unset;
+}
+.contenedorNav .navDesktop__link:hover {
+  color: #e67e22;
+}
+.contenedorNav .navDesktop__link--active {
+  color: #e67e22;
+  border-bottom: 2px solid #e67e22;
+  pointer-events: none;
+}
+.contenedorNav .botonMenu {
+  position: absolute;
+  right: 8rem;
+  top: auto;
+  bottom: auto;
+  background-color: #000;
+  pointer-events: unset;
+}
+.contenedorNav .botonMenu__imagen {
+  max-width: 100%;
+  width: 3rem;
+  height: auto;
+  object-fit: cover;
+  filter: invert(1);
+  pointer-events: none;
+}
+.contenedorNav .navMobile {
+  background-color: #000;
+  position: absolute;
+  top: 100%;
+  right: -100%;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 0rem;
+  padding-bottom: 2rem;
+  transition: right 0.5s ease;
+}
+.contenedorNav .navMobile--active {
+  right: 0%;
+}
+.contenedorNav .navMobile__link {
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+  color: #EAEAEA;
+  transition: color 0.3s ease;
+  pointer-events: unset;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.contenedorNav .navMobile__link--active {
+  width: 100%;
+  background-color: #e67e22;
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */

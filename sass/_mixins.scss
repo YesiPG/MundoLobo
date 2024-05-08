@@ -1,0 +1,32 @@
+@use 'var';
+
+@mixin flex($justify,$align){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin grid($column,$row){
+    display: grid;
+    grid-template-columns: $column;
+    grid-template-rows: $row;
+}
+@mixin texto($family,$size,$color){
+    font-family: $family;
+    font-size: $size;
+    color: $color;
+}
+@mixin imagen($width,$height){
+    max-width: 100%;
+    width: $width;
+    height: $height;
+    object-fit: cover;
+}
+
+@mixin paddingLados($valor){
+    padding-left: $valor;
+    padding-right: $valor;
+}
+@mixin paddingTopBottom($top,$bottom){
+    padding-top: $top;
+    padding-bottom: $bottom;
+}
