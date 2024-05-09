@@ -16,6 +16,7 @@ html {
 
 body {
   user-select: none;
+  overflow-x: hidden;
 }
 
 .contenedorNav {
@@ -67,7 +68,7 @@ body {
 }
 .contenedorNav .botonMenu__imagen {
   max-width: 100%;
-  width: 3rem;
+  width: 2.5rem;
   height: auto;
   object-fit: cover;
   filter: invert(1);
@@ -85,7 +86,7 @@ body {
   flex-direction: column;
   padding-top: 0rem;
   padding-bottom: 2rem;
-  transition: right 0.5s ease;
+  transition: right 1s ease;
 }
 .contenedorNav .navMobile--active {
   right: 0%;
@@ -104,6 +105,94 @@ body {
   width: 100%;
   background-color: #e67e22;
   text-align: center;
+}
+@media screen and (max-width: 576px) {
+  .contenedorNav {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  .contenedorNav .botonMenu {
+    right: 4rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .contenedorNav {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .contenedorNav .botonMenu {
+    right: 2rem;
+  }
+  .contenedorNav .navMobile {
+    width: 100%;
+  }
+}
+
+.inicioHero {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+.inicioHero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/image/fondo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+.inicioHero__title {
+  background-color: rgba(0, 0, 0, 0.7);
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  color: #EAEAEA;
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin: 0 4rem;
+}
+
+.inicioContent {
+  background-color: #000;
+  padding-left: 8rem;
+  padding-right: 8rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+}
+.inicioContent__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  color: #EAEAEA;
+  margin-bottom: 2rem;
+}
+.inicioContent__parrafo {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.3rem;
+  color: #EAEAEA;
+}
+.inicioContent__imagen {
+  max-width: 100%;
+  width: 30rem;
+  height: 35rem;
+  object-fit: cover;
+  margin: auto;
 }
 
 /*# sourceMappingURL=style.css.map */

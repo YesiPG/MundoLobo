@@ -45,7 +45,7 @@
         background-color: var.$color-negro;
         pointer-events: unset;
         &__imagen{
-            @include mixins.imagen(3rem,auto);
+            @include mixins.imagen(2.5rem,auto);
             filter: invert(1);
             pointer-events: none;
         }
@@ -60,7 +60,7 @@
         @include mixins.flex(center,center);
         flex-direction: column;
         @include mixins.paddingTopBottom(0rem,2rem);
-        transition: right .5s ease;
+        transition: right 1s ease;
 
         &--active{
             right: 0%;
@@ -80,9 +80,20 @@
         }
     }
 
-    @media screen and (max-width: 768px){
-        
-        
+    @media screen and (max-width: 576px){
+        @include mixins.paddingLados(4rem);
+        .botonMenu{
+            right: 4rem;
+        }
+    }
+    @media screen and (max-width: 480px){
+        @include mixins.paddingLados(2rem);
+        .botonMenu{
+            right: 2rem;
+        }
+        .navMobile{
+            width: 100%;
+        }
     }
 }
 
