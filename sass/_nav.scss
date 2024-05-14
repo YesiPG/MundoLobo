@@ -7,6 +7,7 @@
     background-color: var.$color-negro;
     @include mixins.flex(space-between,center);
     @include mixins.paddingLados(8rem);
+    box-shadow: 2px 4px 10px var.$color-grisClaro;
     z-index: 80;
 
     .logo{

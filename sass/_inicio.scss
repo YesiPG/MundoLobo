@@ -37,12 +37,12 @@
 .inicioContent{
     background-color: var.$color-negro;
     @include mixins.paddingLados(8rem);
-    @include mixins.paddingTopBottom(4rem,4rem);
+    @include mixins.paddingTopBottom(8rem,4rem);
     @include mixins.grid(50% 50%, 100%);
 
 
     &__title{
-        @include mixins.texto(var.$font-titulo,1.6rem,var.$color-grisClaro);
+        @include mixins.texto(var.$font-titulo,1.8rem,var.$color-grisClaro);
         margin-bottom: 2rem;
     }
     &__parrafo{
